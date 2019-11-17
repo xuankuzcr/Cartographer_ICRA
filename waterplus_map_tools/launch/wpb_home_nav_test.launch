@@ -1,0 +1,15 @@
+<launch>
+  <master auto="start"/>
+
+
+  <!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="/home/chunran/Downloads/mymap.yaml"/>
+  <!-- RViz and TF tree -->
+  <arg name="rvizconfig" default="$(find waterplus_map_tools)/rviz/nav.rviz" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+  <!-- Map tools  -->
+  <node pkg="waterplus_map_tools" type="wp_manager" name="wp_manager" output="screen">
+    <param name="load" type="string" value="/home/churan/waypoints.xml"/> 
+  </node>
+
+</launch>
