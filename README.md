@@ -1,4 +1,4 @@
-# Cartographer_ICAR仿真
+# Cartographer_ICRA仿真
 ## 使用步骤
 
 1. 配置好cartographer [carographer cartographer_ros cartographer_turtlebot ceres-solver.](https://github.com/googlecartographer)
@@ -32,12 +32,12 @@ echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 cd shell_carto/
 ./gazebo_empty_start.sh
 ```
-![gazebo pic](https://github.com/XJTU-ICRA2020/Cartographer_ICAR/tree/master/picture/1.jpg)
+![gazebo pic](picture/1.jpg)
 cartographer建图
 ```
 ./mapping_cartographer.sh
 ```
-![gazebo pic](https://github.com/XJTU-ICRA2020/Cartographer_ICAR/tree/master/picture/3.jpg)
+![gazebo pic](picture/3.jpg)
 保存地图
 ```
 mkdir ~/map
@@ -48,7 +48,7 @@ mkdir ~/map
 ./gazebo_empty_start.sh
 ./carto_localization.sh
 ```
-![gazebo pic](https://github.com/XJTU-ICRA2020/Cartographer_ICAR/tree/master/picture/2.jpg)
+![gazebo pic](/picture/2.jpg)
 ### 3. 基于2实现多点连续导航
 利用Add Waypoint设置多个目标点
 ```
@@ -56,10 +56,10 @@ sudo cp waypoints.xml ~/waypoints.xml
 ./gazebo_empty_start.sh
 ./tools_carto_localization.sh
 ```
-![gazebo pic](https://github.com/XJTU-ICRA2020/Cartographer_ICAR/tree/master/picture/5.png)
+![gazebo pic](picture/5.png)
 保存标注目标点信息到~/waypoints.xml,并依次发送move_base_msgs::MoveBaseGoal goal信息
 ```
 ./map_tools.sh
 ```
-![gazebo pic](https://github.com/XJTU-ICRA2020/Cartographer_ICAR/tree/master/picture/4.png)
+![gazebo pic](picture/4.png)
 
