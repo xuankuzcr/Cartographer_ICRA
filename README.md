@@ -7,25 +7,16 @@
 ```
 sudo apt-get install ros-kinetic-joy ros-kinetic-teleop-twist-joy ros-kinetic-teleop-twist-keyboard ros-kinetic-laser-proc ros-kinetic-rgbd-launch ros-kinetic-depthimage-to-laserscan ros-kinetic-rosserial-arduino ros-kinetic-rosserial-python ros-kinetic-rosserial-server ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping ros-kinetic-navigation ros-kinetic-interactive-markers
 ```
-3. 编译
+3. 获取源码放到工作空间下
 ```
 mkdir -p ~/catkin_ws/src/ && cd ~/catkin_ws/src/
-```
-
-```
 sudo cp ~/Cartographer_ICAR/{turtlebot3,turtlebot3_msgs,turtlebot3_simulations,waterplus_map_tools} ~/catkin_ws/src/
 ```
 4. 编译
 ```
 cd ~/catkin_ws
-```
-```
 catkin_make
-```
-```
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
-```
-```
 echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 ```
 5. 使用说明
