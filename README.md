@@ -1,7 +1,7 @@
 # Cartographer_ICAR仿真
 ## 使用步骤
 
-1. 配置好依赖环境 [carographer cartographer_ros cartographer_turtlebot ceres-solver.](https://github.com/googlecartographer)
+1. 配置好cartographer [carographer cartographer_ros cartographer_turtlebot ceres-solver.](https://github.com/googlecartographer)
 
 2. 安装依赖项
 ```
@@ -21,17 +21,23 @@ echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
 ```
 5. 使用说明
 
-为了方便使用我把launch文件合成了shell脚本放在仓库目录的shell_carto文件夹内
+* 为了方便使用我把launch文件合成了shell脚本放在仓库目录的shell_carto文件夹内
+* 另附Cartographer源码分析
 
 ## 操作方法
 
 ### 1. cartographer建图
-打开仿真环境建图
+打开仿真环境
 ```
 cd shell_carto/
 ./gazebo_empty_start.sh
+```
+![gazebo pic](./picture/1.jpg)
+cartographer建图
+```
 ./mapping_cartographer.sh
 ```
+![gazebo pic](./picture/3.jpg)
 保存地图
 ```
 mkdir ~/map
@@ -42,10 +48,18 @@ mkdir ~/map
 ./gazebo_empty_start.sh
 ./carto_localization.sh
 ```
-### 3. 实现多点连续导航
+![gazebo pic](./picture/2.jpg)
+### 3. 基于2实现多点连续导航
+利用Add Waypoint设置多个目标点
 ```
 sudo cp waypoints.xml ~/waypoints.xml
 ./gazebo_empty_start.sh
 ./tools_carto_localization.sh
+```
+![gazebo pic](./picture/5.png)
+保存标注目标点信息到~/waypoints.xml,并依次发送move_base_msgs::MoveBaseGoal goal信息
+```
 ./map_tools.sh
 ```
+![gazebo pic](./picture/4.png)
+
