@@ -1,7 +1,7 @@
 # Cartographer_ICRA仿真
 ## 使用步骤
 
-1. 配置好cartographer | [carographer](https://github.com/cartographer-project/cartographer) [cartographer_ros](https://github.com/cartographer-project/cartographer_ros) [cartographer_turtlebot](https://github.com/cartographer-project/cartographer_turtlebot) [ceres-solve](https://github.com/ceres-solver/ceres-solver).
+1. 配置好[carographer](https://github.com/cartographer-project/cartographer) | [cartographer_ros](https://github.com/cartographer-project/cartographer_ros) |  [cartographer_turtlebot](https://github.com/cartographer-project/cartographer_turtlebot) | [ceres-solve](https://github.com/ceres-solver/ceres-solver).
 
 2. 安装依赖项
 ```
