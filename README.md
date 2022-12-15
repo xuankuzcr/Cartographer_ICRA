@@ -1,4 +1,4 @@
-# Cartographer_ICRA仿真
+# DJI RoboMaster AI Challenge (Carographer Simulation)
 ## 使用步骤
 
 1. 配置好[carographer](https://github.com/cartographer-project/cartographer) | [cartographer_ros](https://github.com/cartographer-project/cartographer_ros) |  [cartographer_turtlebot](https://github.com/cartographer-project/cartographer_turtlebot) | [ceres-solve](https://github.com/ceres-solver/ceres-solver).
